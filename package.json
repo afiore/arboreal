@@ -1,0 +1,14 @@
+{
+  "name": "arboreal",
+  "description": "Javascript tree traversal and manipulation library",
+  "author": "Andrea Fiore",
+  "version": "0.0.1",
+  "contributors": [],
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-node": "1.0.6"
+  },
+  "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+  }
+}
