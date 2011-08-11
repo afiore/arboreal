@@ -129,6 +129,25 @@ describe("Arboreal", function () {
     ).toBeTruthy();
   });
 
+  it("#find", function () {
+    var tree = new Arboreal();
+    appendSomeChildren(tree);
+
+    expect(tree.find("0.3").id).toBe("0.3");
+  });
+
+  it("#path", function () {
+    var tree = new Arboreal(),
+        treeArry;
+
+    appendSomeChildren(tree);
+    treeArray = tree.toArray();
+    lastNode = treeArray[treeArray.length -1 ];
+
+    expect(tree.path("3").id).toBe("0.3");
+    console.info(tree.path("0.1").id);
+    expect(tree.path("0.1").id).toBe("0.0.1");
+  });
 
 });
 
