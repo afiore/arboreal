@@ -1,6 +1,5 @@
-if (typeof module !== 'undefined' && module.exports) {
-  var Arboreal = require('../../lib/arboreal');
-}
+var util = require("util");
+var Arboreal = require('../../lib/arboreal');
 
 
 function appendSomeChildren (tree) {
@@ -28,6 +27,27 @@ describe("Arboreal", function () {
     expect(tree.data.myCustomAttr).toBeTruthy();
   });
 
+
+  it("::parse()", function () {
+    var data = {
+      category: 'JavaScript',
+      subcategories: [
+        {category: 'Ajax (programming)'},
+        {category: 'JavaScript engines'},
+        {category: 'JavaScript produgramming languages family',
+         subcategories: [{
+           category: 'JavaScript dialect engines'
+         }]
+        },
+        {category: 'JavaScript based calendar components'},
+        {category: 'JavaScript based HTML editors'}
+      ]
+    };
+    var tree = Arboreal.parse(data, 'subcategories');
+    expect(tree.length).toBe(7);
+    
+  });
+
   it("#appendChild(null, 'bla')", function () {
     var tree = new Arboreal();
     tree.appendChild({myCustomAttr:true}, "myId" );
@@ -48,7 +68,7 @@ describe("Arboreal", function () {
 
     expect( tree.removeChild(thirdChild)).toBe(thirdChild);
     expect(tree.children.length).toBe(3);
-    expect(tree.children[2].id).toBe("0.3");
+    expect(tree.children[2].id).toBe("0/3");
 
 
     expect(tree.children[0].removeChild(1).id).toBe(secondChild.id);
@@ -65,8 +85,8 @@ describe("Arboreal", function () {
     });
 
     expect(tree.id).toBe('_0');
-    expect(tree.children[0].id).toBe('_0.0');
-    expect(tree.children[3].id).toBe('_0.3');
+    expect(tree.children[0].id).toBe('_0/0');
+    expect(tree.children[3].id).toBe('_0/3');
 
     //expect to stop traversing when the iterator returns a falsy value
 
@@ -101,8 +121,8 @@ describe("Arboreal", function () {
     //should traverse all the nodes in the right order
     tree.children[0].children[1].traverseUp(appendId);
 
-    expect(treeIds.shift()).toBe("0.0.1");
-    expect(treeIds.pop()).toBe("0.3");
+    expect(treeIds.shift()).toBe("0/0/1");
+    expect(treeIds.pop()).toBe("0/3");
 
     treeIds = [];
     //should break when iterator returns a falsy value
@@ -133,7 +153,10 @@ describe("Arboreal", function () {
     var tree = new Arboreal();
     appendSomeChildren(tree);
 
-    expect(tree.find("0.3").id).toBe("0.3");
+    expect(tree.find("0/3").id).toBe("0/3");
+    //expect(tree.find(function (node) {
+    //  return node.id === "0.3";
+    //})).toBe("0/3");
   });
 
   it("#path", function () {
@@ -144,12 +167,8 @@ describe("Arboreal", function () {
     treeArray = tree.toArray();
     lastNode = treeArray[treeArray.length -1 ];
 
-    expect(tree.path("3").id).toBe("0.3");
-    console.info(tree.path("0.1").id);
-    expect(tree.path("0.1").id).toBe("0.0.1");
+    expect(tree.path("3").id).toBe("0/3");
+    expect(tree.path("0/1").id).toBe("0/0/1");
   });
 
 });
-
-
-
