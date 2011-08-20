@@ -110,9 +110,9 @@ method.
 The find method will also accept a string as an argument. In that case, it will
 return a node with the provided id
 
-   tree.find("0/2/0").data.category
+    tree.find("0/2/0").data.category
 
-   // => JavaScript dialect engines
+    // => JavaScript dialect engines
 
 ## Manipulation
 
