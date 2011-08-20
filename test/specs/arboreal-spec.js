@@ -1,6 +1,7 @@
-var util = require("util");
-var Arboreal = require('../../lib/arboreal');
-
+if (typeof require !== 'undefined') {
+  util = require("util");
+  Arboreal = require('../../lib/arboreal');
+}
 
 function appendSomeChildren (tree) {
   tree
@@ -13,7 +14,6 @@ function appendSomeChildren (tree) {
     .appendChild()
     .appendChild();
 }
-
 
 describe("Arboreal", function () {
   it("#new()", function () {
@@ -45,7 +45,6 @@ describe("Arboreal", function () {
     };
     var tree = Arboreal.parse(data, 'subcategories');
     expect(tree.length).toBe(7);
-    
   });
 
   it("#appendChild(null, 'bla')", function () {
@@ -171,5 +170,4 @@ describe("Arboreal", function () {
     expect(tree.path("/3").id).toBe("0/3");
     expect(tree.path("0/1").id).toBe("0/0/1");
   });
-
 });

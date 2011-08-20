@@ -25,8 +25,7 @@ traversing tree like data structures in JavaScript. A tree can be created from s
       .appendChild()
       .children[0]
          .appendChild()
-         .appendChild()
-
+         .appendChild();
 
 Alternatively, arboreal can also parse an existing object into a tree (it needs to know the name of the 'children' attribute though).
 
