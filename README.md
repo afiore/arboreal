@@ -3,6 +3,8 @@
 A micro-library for traversing and manipulating tree-like data
 structures in JavaScript; works with both node.js and the browser.
 
+http://travis-ci.org/afiore/arboreal.png
+
 ## Installation
 
 In node.js:
