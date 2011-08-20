@@ -139,7 +139,7 @@ method on the node object bound to the iterator function.
 
 ## Testing
 
-Arboreal test suites uses [Jasmine](http://pivotal.github.com/jasmine/).
+Arboreal test suite uses [Jasmine](http://pivotal.github.com/jasmine/).
 To run it in node.js..
 
     cd /home/me/code/arboreal && npm test
