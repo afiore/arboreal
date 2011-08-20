@@ -154,9 +154,9 @@ describe("Arboreal", function () {
     appendSomeChildren(tree);
 
     expect(tree.find("0/3").id).toBe("0/3");
-    //expect(tree.find(function (node) {
-    //  return node.id === "0.3";
-    //})).toBe("0/3");
+    expect(tree.find(function () {
+      return this.depth == 2;
+    }).id).toBe("0/0/0");
   });
 
   it("#path", function () {
@@ -167,7 +167,8 @@ describe("Arboreal", function () {
     treeArray = tree.toArray();
     lastNode = treeArray[treeArray.length -1 ];
 
-    expect(tree.path("3").id).toBe("0/3");
+    //should automatically strip out the '/' prefix
+    expect(tree.path("/3").id).toBe("0/3");
     expect(tree.path("0/1").id).toBe("0/0/1");
   });
 
