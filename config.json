@@ -1,0 +1,19 @@
+{
+  "VERSION": "0.1", 
+  "JSHINT_OPTS": {
+     "onevar":  true,
+     "newcap":  true,
+     "undef":   true,
+     "browser": true,
+     "devel":   true,
+     "maxerr":  1000,
+     "indent":  2,
+     "predef": [
+        "module", "require", "window"
+     ]
+  },
+  "JAVASCRIPT": {
+    "DIST_DIR": "build",
+    "arboreal": ["lib/arboreal.js"]
+  }
+}
