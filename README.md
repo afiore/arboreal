@@ -27,7 +27,7 @@ traversing tree like data structures. A tree can be created from scratch and the
          .appendChild()
          .appendChild();
 
-For each child node, Arboreal will automatically assign an id string representing depth and the index
+For each child node, Arboreal will automatically assign an id string representing the depth and the index
 the position of the node within the tree structure.
 
     tree.children[0].children[1].id
