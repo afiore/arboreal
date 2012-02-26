@@ -44,7 +44,7 @@ know the name of the 'children' attribute).
       subcategories: [
         {category: 'Ajax (programming)'},
         {category: 'JavaScript engines'},
-        {category: 'JavaScript produgramming languages family',
+        {category: 'JavaScript programming languages family',
          subcategories: [{
            category: 'JavaScript dialect engines'
          }]
