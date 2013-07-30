@@ -44,7 +44,7 @@ describe("Arboreal", function () {
       ]
     };
     var tree = Arboreal.parse(data, 'subcategories');
-    expect(tree.length).toBe(7);
+    expect(tree.getLength()).toBe(7);
   });
 
   it("#appendChild(null, 'bla')", function () {
