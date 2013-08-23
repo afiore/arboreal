@@ -28,7 +28,7 @@ describe("Arboreal", function () {
   });
 
 
-  it("::parse()", function () {
+  describe("::parse()", function () {
     var data = {
       category: 'JavaScript',
       subcategories: [
@@ -43,8 +43,29 @@ describe("Arboreal", function () {
         {category: 'JavaScript based HTML editors'}
       ]
     };
-    var tree = Arboreal.parse(data, 'subcategories');
-    expect(tree.length).toBe(7);
+    it("default parent", function () {
+      var tree = Arboreal.parse(data, 'subcategories');
+      expect(tree.getLength()).toBe(7);
+    });
+    it("Arboreal parent", function () {
+      var subData = {
+        category: 'C#',
+        subcategories: [
+          {category: 'WinForms'},
+          {category: 'WPF',
+           subcategories: [{
+             category: 'XAML markup'
+           }]
+          },
+         
+        ]
+      };
+      var tree = Arboreal.parse(data, 'subcategories');
+      var biggerTree = Arboreal.parse(subData, 'subcategories', tree.children[1]);
+      expect(biggerTree.children[0].getLength()).toBe(4);
+      expect(tree.getLength()).toBe(11);
+      expect(tree.children[1].children[0].data.category).toBe('C#');
+    });
   });
 
   it("#appendChild(null, 'bla')", function () {
@@ -54,7 +75,24 @@ describe("Arboreal", function () {
     expect(tree.children[0].id).toBe("myId");
     expect(tree.children[0].parent).toEqual(tree);
   });
-
+  
+  it("#appendChildren to root", function () {
+    var tree = new Arboreal();
+    tree.appendChildren({testAttr:'subroot', subitems:[{testAttr:'firstChild'}]}, "subitems" );
+    expect(tree.getLength()).toBe(3);
+    expect(tree.children[0].data.testAttr).toBe("subroot");
+    expect(tree.children[0].children[0].data.testAttr).toEqual('firstChild');
+  });
+  
+  it("#appendChildren to children", function () {
+    var tree = new Arboreal();
+    tree.appendChild().appendChild()
+    tree.children[1].appendChildren({testAttr:'secondchild', subitems:[{testAttr:'third child'}]}, "subitems");
+    expect(tree.getLength()).toBe(5);
+    expect(tree.children[1].children[0].data.testAttr).toBe("secondchild");
+    expect(tree.children[1].children[0].children[0].data.testAttr).toEqual('third child');
+  });
+  
   it("#removeChild()", function () {
     var tree = new Arboreal(),
         thirdChild,
@@ -131,7 +169,40 @@ describe("Arboreal", function () {
     });
     expect(treeIds.length).toBe(3);
   });
+  
+  it("#bubbleUp", function () {
+    var tree = new Arboreal(),
+        callbackCounter=0,
+        treeIds = [],
+        spy1 = jasmine.createSpy(),
+        spy2 = jasmine.createSpy(),
+        appendId = function (node) {
+          treeIds.push(node.id);
+        };
 
+
+    appendSomeChildren(tree);
+    tree.bubbleUp(spy1);
+    //should iterate over itself
+    expect(spy1.callCount).toBe(1);
+
+    //should bubble up to the root
+    tree.children[0].children[1].bubbleUp(spy2);
+    expect(spy2.callCount).toBe(1+1+1);
+    
+    //should bubble up in the right order
+    tree.children[0].children[1].bubbleUp(appendId);
+
+    expect(treeIds.shift()).toBe("0/0/1");
+    
+    treeIds = [];
+    //should break when iterator returns a falsy value
+    tree.bubbleUp(function (node) {
+      appendId(node);
+      if (treeIds.length === 2) return false;
+    });
+    expect(treeIds.length).toBe(1);
+  });
 
   it("#toArray", function () {
     var tree = new Arboreal();
