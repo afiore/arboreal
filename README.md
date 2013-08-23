@@ -103,7 +103,15 @@ rewritten as:
       for (i = 1; i <= this.depth; i++) depth += ">>";
       console.info([depth, this.data.category].join(" "));
     }
+    
+Arboreal object can be iterated up to the root using method 'bubbleUp':
 
+    tree.children[2].children[0].bubbleUp(iterator)
+    
+    //  => >>>> JavaScript dialect engines
+    //     >> JavaScript programming languages family
+    //     JavaScript
+    
 ### Search
 
 In order to search for a single node into an arboreal object, one can use the `find`

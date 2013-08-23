@@ -169,7 +169,40 @@ describe("Arboreal", function () {
     });
     expect(treeIds.length).toBe(3);
   });
+  
+  it("#bubbleUp", function () {
+    var tree = new Arboreal(),
+        callbackCounter=0,
+        treeIds = [],
+        spy1 = jasmine.createSpy(),
+        spy2 = jasmine.createSpy(),
+        appendId = function (node) {
+          treeIds.push(node.id);
+        };
 
+
+    appendSomeChildren(tree);
+    tree.bubbleUp(spy1);
+    //should iterate over itself
+    expect(spy1.callCount).toBe(1);
+
+    //should bubble up to the root
+    tree.children[0].children[1].bubbleUp(spy2);
+    expect(spy2.callCount).toBe(1+1+1);
+    
+    //should bubble up in the right order
+    tree.children[0].children[1].bubbleUp(appendId);
+
+    expect(treeIds.shift()).toBe("0/0/1");
+    
+    treeIds = [];
+    //should break when iterator returns a falsy value
+    tree.bubbleUp(function (node) {
+      appendId(node);
+      if (treeIds.length === 2) return false;
+    });
+    expect(treeIds.length).toBe(1);
+  });
 
   it("#toArray", function () {
     var tree = new Arboreal();
