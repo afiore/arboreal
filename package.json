@@ -9,6 +9,7 @@
     "jasmine-node": "1.0.6",
     "smoosh": "0.3.0"
   },
+  "main": "./lib/arboreal.js",
   "scripts": {
     "test": "jasmine-node test/specs"
   },
