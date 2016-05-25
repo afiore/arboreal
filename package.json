@@ -2,7 +2,7 @@
   "name": "arboreal",
   "description": "Javascript tree traversal and manipulation library",
   "author": "Andrea Fiore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "contributors": [
     {
       "name": "Nenad V. Nikolić",
