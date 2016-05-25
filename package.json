@@ -3,7 +3,13 @@
   "description": "Javascript tree traversal and manipulation library",
   "author": "Andrea Fiore",
   "version": "0.0.1",
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Nenad V. Nikolić",
+      "email": "me@shonzilla.com",
+      "url": "http://shonzilla.com/"
+    }
+  ],
   "dependencies": {},
   "devDependencies": {
     "jasmine-node": "^1.14.5",
