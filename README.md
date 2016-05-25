@@ -135,7 +135,7 @@ it will try to find a node by id.
 While traversing a tree, nodes can be deleted by calling the `remove`
 method on the node object bound to the iterator function.
 
-    tree.getLength();
+    tree.length;
 
     // => 7
 
@@ -146,7 +146,7 @@ method on the node object bound to the iterator function.
       }
     });
 
-    tree.getLength();
+    tree.length;
 
     // 5
 

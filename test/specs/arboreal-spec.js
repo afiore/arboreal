@@ -28,7 +28,7 @@ describe("Arboreal", function () {
   });
 
 
-  describe("::parse()", function () {
+  describe("#parse(data, 'someId')", function () {
     var data = {
       category: 'JavaScript',
       subcategories: [
@@ -45,7 +45,7 @@ describe("Arboreal", function () {
     };
     it("default parent", function () {
       var tree = Arboreal.parse(data, 'subcategories');
-      expect(tree.getLength()).toBe(7);
+      expect(tree.length).toBe(7);
     });
     it("Arboreal parent", function () {
       var subData = {
@@ -62,8 +62,8 @@ describe("Arboreal", function () {
       };
       var tree = Arboreal.parse(data, 'subcategories');
       var biggerTree = Arboreal.parse(subData, 'subcategories', tree.children[1]);
-      expect(biggerTree.children[0].getLength()).toBe(4);
-      expect(tree.getLength()).toBe(11);
+      expect(biggerTree.children[0].length).toBe(4);
+      expect(tree.length).toBe(11);
       expect(tree.children[1].children[0].data.category).toBe('C#');
     });
   });
@@ -79,7 +79,7 @@ describe("Arboreal", function () {
   it("#appendChildren to root", function () {
     var tree = new Arboreal();
     tree.appendChildren({testAttr:'subroot', subitems:[{testAttr:'firstChild'}]}, "subitems" );
-    expect(tree.getLength()).toBe(3);
+    expect(tree.length).toBe(3);
     expect(tree.children[0].data.testAttr).toBe("subroot");
     expect(tree.children[0].children[0].data.testAttr).toEqual('firstChild');
   });
@@ -88,7 +88,7 @@ describe("Arboreal", function () {
     var tree = new Arboreal();
     tree.appendChild().appendChild()
     tree.children[1].appendChildren({testAttr:'secondchild', subitems:[{testAttr:'third child'}]}, "subitems");
-    expect(tree.getLength()).toBe(5);
+    expect(tree.length).toBe(5);
     expect(tree.children[1].children[0].data.testAttr).toBe("secondchild");
     expect(tree.children[1].children[0].children[0].data.testAttr).toEqual('third child');
   });
