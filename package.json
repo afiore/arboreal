@@ -6,8 +6,8 @@
   "contributors": [],
   "dependencies": {},
   "devDependencies": {
-    "jasmine-node": "1.14.5",
-    "smoosh": "0.4.1"
+    "jasmine-node": "^1.14.5",
+    "smoosh": "^0.4.1"
   },
   "main": "./lib/arboreal",
   "scripts": {
