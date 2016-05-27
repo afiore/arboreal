@@ -16,7 +16,7 @@
     "smoosh": "^0.4.1"
   },
   "engines": {
-    "node": ">= 0.4.1"
+    "node": ">= 4.0.0"
   },
   "license": "MIT",
   "main": "./lib/arboreal",
