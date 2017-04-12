@@ -2,7 +2,7 @@
     "name": "arboreal.js",
     "title": "Arboreal.js",
     "description": "Javascript tree traversal and manipulation library (Forked from Nenad V. Nikolić, originally by Andrea Fiore)",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "homepage": "https://github.com/vasiliyaltunin/arboreal.js",
     "author": {                                                
         "name": "Vasiliy Altunin",

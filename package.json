@@ -2,7 +2,7 @@
   "name": "arboreal.js",
   "description": "Javascript tree traversal and manipulation library (forked from Nenad V. Nikolić code, originally by Andrea Fiore)",
   "author": "Vasiliy Altuin",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "contributors": [
     {
       "name": "Alex Pernot",
