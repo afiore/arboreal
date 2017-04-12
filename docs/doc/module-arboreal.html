@@ -1,0 +1,2500 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Arboreal.js Module: arboreal</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Arboreal.js</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-arboreal.html">arboreal</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: arboreal</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Javascript tree traversal and manipulation library (Forked from Nenad V. Nikolić, originally by Andrea Fiore)</p></div>
+        
+
+        
+<dl class="details">
+    
+
+	
+	<dt class="tag-version method-doc-label method-doc-details-label">Version:</dt>
+	<dd class="tag-version">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+	<dt class="tag-author method-doc-label method-doc-details-label">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li><a href="mailto:skyr@altunin.online">Vasiliy Altunin</a></li>
+			</ul>
+	</dd>
+	
+
+	
+	<dt class="tag-copyright method-doc-label method-doc-details-label">Copyright:</dt>
+	<dd class="tag-copyright">
+		<ul class="dummy">
+			<li>2017 Vasiliy Altunin</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="tag-license method-doc-label method-doc-details-label">License:</dt>
+	<dd class="tag-license">
+		<ul class="dummy">
+			<li>MIT</li>
+		</ul>
+	</dd>
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-1">line 1</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".Arboreal"><span class="type-signature">&lt;static> </span>Arboreal( [parent] [, data] [, id] [, separator])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Creates Arboreal root tree object or child node object</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Arboreal</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Parent node</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Data to store in node</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>node id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>separator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Char</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>separator for id numbers</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-192">line 192</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Arboreal object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">* var tree = new Arboreal(null,{category: &#x27;JavaScript&#x27;});console.log(tree.toString(true));Result:0 {&quot;category&quot;:&quot;JavaScript&quot;}</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".Arboreal.parse"><span class="type-signature">&lt;static> </span>Arboreal.parse(object, childrenAttr, parent)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parses Object and creates tree from it</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>object</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Object to parse</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>childrenAttr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>name of object attr to use as children attr</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Arboreal</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Parent node, if null new tree created</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-248">line 248</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Arboreal root object or parent object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};tree = Arboreal.parse(wikipediaJsCategory, &#x27;subcategories&#x27;);Result:0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;} |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;} |- 0/2 {&quot;category&quot;:&quot;JavaScript programming languages family&quot;} |- 0/2/0  {&quot;category&quot;:&quot;JavaScript dialect engines&quot;} |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;} |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="appendChild"><span class="type-signature">&lt;static> </span>Arboreal#appendChild(data [, id])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Appends child node to tree</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Data to store in node</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Node id</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-294">line 294</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Arboreal root object or parent object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var tree = new Arboreal(null,{category: &#x27;JavaScript&#x27;});tree.appendChild({category: &#x27;Ajax (programming)&#x27;});Result0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;}</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="appendChildren"><span class="type-signature">&lt;static> </span>Arboreal#appendChildren(data, childrenAttr)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parse data and add it to <code>this</code> node</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Object to be parsed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>childrenAttr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Attr to use as children attr</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-348">line 348</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Arboreal root object or parent object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};tree = Arboreal.parse(wikipediaJsCategory, &#x27;subcategories&#x27;);var subCategory = {category: &#x27;JavaScript ajax query&#x27;,subcategories: [    {category: &#x27;JSON&#x27;},    {category: &#x27;jQuery&#x27;}]};tree.children[0].appendChildren(subCategory, &#x27;subcategories&#x27;);console.log(tree.toString(true));Result:0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;}  |- 0/0/0  {&quot;category&quot;:&quot;JavaScript ajax query&quot;}   |- 0/0/0/0   {&quot;category&quot;:&quot;JSON&quot;}   |- 0/0/0/1   {&quot;category&quot;:&quot;jQuery&quot;} |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;} |- 0/2 {&quot;category&quot;:&quot;JavaScript programming languages family&quot;}  |- 0/2/0  {&quot;category&quot;:&quot;JavaScript dialect engines&quot;} |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;} |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}     </pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="bubbleUp"><span class="type-signature">&lt;static> </span>Arboreal#bubbleUp(iterator)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Traverse tree bubble up</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>iterator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Iterator function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-556">line 556</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};function iterator (node) {  var depth = &quot;&quot;, i;  for (i = 1; i &lt;= node.depth; i++) depth += &quot;&gt;&gt;&quot;;  console.log([depth, node.data.category].join(&quot; &quot;));}tree.children[2].children[0].bubbleUp(iterator);Result:&gt;&gt;&gt;&gt; JavaScript dialect engines&gt;&gt; JavaScript programming languages familyJavaScript</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="find"><span class="type-signature">&lt;static> </span>Arboreal#find(finder)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Finds node in tree by using iterator</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>finder</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Iterator</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-660">line 660</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>First match</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};var result = tree.find(function (node) {  return (/calendar/).test(node.data.category)}).data.category;console.log(result);Result:JavaScript based calendar components</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="path"><span class="type-signature">&lt;static> </span>Arboreal#path(path [, separator])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns Arboreal for givent id path</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Id string</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>separator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Char</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Separator to use</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-709">line 709</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Node finded by path</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};var result = tree.path(&quot;/2/0&quot;).data.category;console.log(result);Result:JavaScript dialect engines</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="remove"><span class="type-signature">&lt;static> </span>Arboreal#remove()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Removes <code>this</code> node</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-429">line 429</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};tree.children[0].remove();console.log(tree.toString(true));Result:0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;} |- 0/2 {&quot;category&quot;:&quot;JavaScript programming languages family&quot;}  |- 0/2/0  {&quot;category&quot;:&quot;JavaScript dialect engines&quot;} |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;} |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeChild"><span class="type-signature">&lt;static> </span>Arboreal#removeChild(arg)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Remove child node from <code>this</code> node</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Node</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Node id or Arboreal</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-386">line 386</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Arboreal</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arboreal</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};tree.removeChild(2);console.log(tree.toString(true));Result:0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;} |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;} |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;} |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}     </pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toString"><span class="type-signature">&lt;static> </span>Arboreal#toString( [isValue])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Retrns string representation of a tree</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>isValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>If true than data value printed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-603">line 603</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};console.log(tree.toString());Result: 0  |- 0/0  |- 0/1  |- 0/2   |- 0/2/0   |- 0/3  |- 0/4   If True passed as arg result changed: 0 {&quot;category&quot;:&quot;JavaScript&quot;} |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;} |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;} |- 0/2 {&quot;category&quot;:&quot;JavaScript programming languages family&quot;}  |- 0/2/0  {&quot;category&quot;:&quot;JavaScript dialect engines&quot;} |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;} |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="traverseDown"><span class="type-signature">&lt;static> </span>Arboreal#traverseDown(iterator)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Traverse tree down</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>iterator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Iterator function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-474">line 474</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">//Traverse and creating HTML list discribed in example//https://vasiliyaltunin.github.io/aboreal.js/examplesvar wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};function iterator (node) {  var depth = &quot;&quot;, i;  for (i = 1; i &lt;= node.depth; i++) depth += &quot;&gt;&gt;&quot;;  console.log([depth, node.data.category].join(&quot; &quot;));}tree.traverseDown(iterator);Result: JavaScript  &gt;&gt; Ajax (programming)&gt;&gt; JavaScript engines&gt;&gt; JavaScript programming languages family &gt;&gt;&gt;&gt; JavaScript dialect engines  &gt;&gt; JavaScript based calendar components  &gt;&gt; JavaScript based HTML editors</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="traverseUp"><span class="type-signature">&lt;static> </span>Arboreal#traverseUp(iterator)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Traverse tree up</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>iterator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Iterator function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="arboreal.js.html">arboreal.js</a>,
+				 <a href="arboreal.js.html#sunlight-1-line-518">line 518</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var wikipediaJsCategory = {    category: &#x27;JavaScript&#x27;,    subcategories: [         {category: &#x27;Ajax (programming)&#x27;},         {category: &#x27;JavaScript engines&#x27;},         {category: &#x27;JavaScript programming languages family&#x27;,             subcategories: [{                 category: &#x27;JavaScript dialect engines&#x27;             }]          },          {category: &#x27;JavaScript based calendar components&#x27;},          {category: &#x27;JavaScript based HTML editors&#x27;}    ]};function iterator (node) {  var depth = &quot;&quot;, i;  for (i = 1; i &lt;= node.depth; i++) depth += &quot;&gt;&gt;&quot;;  console.log([depth, node.data.category].join(&quot; &quot;));}tree.children[2].traverseUp(iterator);Result:&gt;&gt; JavaScript programming languages family&gt;&gt;&gt;&gt; JavaScript dialect engines JavaScript&gt;&gt; Ajax (programming)&gt;&gt; JavaScript engines&gt;&gt; JavaScript based calendar components&gt;&gt; JavaScript based HTML editors</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright (c) 2017 Vasiliy Altunin.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Wed Apr 12th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

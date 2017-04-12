@@ -1,19 +1,59 @@
 {
-  "name": "arboreal",
-  "description": "Javascript tree traversal and manipulation library",
-  "author": "Andrea Fiore",
-  "version": "0.0.2",
+  "name": "arboreal.js",
+  "description": "Javascript tree traversal and manipulation library (forked from Nenad V. Nikolić code, originally by Andrea Fiore)",
+  "author": "Vasiliy Altuin",
+  "version": "0.0.1",
   "contributors": [
     {
+      "name": "Alex Pernot",
+      "email": "alex_pernot@hotmail.com",
+      "url": "https://github.com/AlexPernot",
+      "contributions": 1,
+      "additions": 7,
+      "deletions": 5,
+      "hireable": null
+    },
+    {
       "name": "Nenad V. Nikolić",
-      "email": "me@shonzilla.com",
-      "url": "http://shonzilla.com/"
+      "email": null,
+      "url": "https://github.com/shonzilla",
+      "contributions": 11,
+      "additions": 37,
+      "deletions": 22,
+      "hireable": true
+    },
+    {
+      "name": "Andrea Fiore",
+      "email": null,
+      "url": "https://github.com/afiore",
+      "contributions": 1,
+      "additions": 20,
+      "deletions": 0,
+      "hireable": null
+    },
+    {
+      "name": "Evgeny Gusev",
+      "email": null,
+      "url": "https://github.com/EvgenyGusev",
+      "contributions": 6,
+      "additions": 124,
+      "deletions": 20,
+      "hireable": null
     }
   ],
   "dependencies": {},
   "devDependencies": {
-    "jasmine-node": "^1.14.5",
-    "smoosh": "^0.4.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^1.3.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jsdoc": "^2.1.0",
+    "ink-docstrap": "^1.3.0",
+   "phantomjs": "^2.1.7",
+    "qunit": "^1.0.0"
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -22,9 +62,9 @@
   "main": "./lib/arboreal",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shonzilla/arboreal.git"
+    "url": "git+https://github.com/vasiliyaltunin/arboreal.js"
   },
   "scripts": {
-    "test": "jasmine-node test/specs"
+    "test": "grunt qunit"
   }
 }

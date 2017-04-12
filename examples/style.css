@@ -1,0 +1,7 @@
+.codeblock
+{
+    margin : 10px;
+    border : 1px #000 solid;
+    max-height: 350px;    
+    overflow: scroll;
+}

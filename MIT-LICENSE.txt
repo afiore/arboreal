@@ -1,5 +1,9 @@
 The MIT License (MIT)
 Copyright © 2013 Andrea Fiore
+Copyright © 2013 Evgeny Gusev
+Copyright © 2014 Alex Pernot
+Copyright © 2016 Nenad V. Nikolić
+Copyright © 2017 Vasiliy Altunin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
