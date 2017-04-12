@@ -15,6 +15,7 @@ Install via npm:
 
 ## Usage
 
+
 Add script to you webpage
 
 ```html
@@ -24,21 +25,27 @@ Add script to you webpage
 Arboreal.js provides a set of methods for parsing, manipulating, and
 traversing tree like data structures. A tree can be created from scratch and then extended with child elements.
 
-    var tree = new Arboreal()
+    var tree = new Arboreal(null, {category: 'JavaScript'});
 
-    tree
-      .appendChild()
-      .appendChild()
-      .children[0]
-         .appendChild()
-         .appendChild();
+    tree.appendChild({category: 'Ajax (programming)'})
+            .appendChild({category: 'JavaScript engines'})
+            .appendChild({category: 'JavaScript programming languages family'})
+                .children[2]
+                .appendChild({category: 'JavaScript dialect engines'})
+            .parent
+            .appendChild({category: 'JavaScript based calendar components'})
+            .appendChild({category: 'JavaScript based HTML editors'});
 
 For each child node, Arboreal.js will automatically assign an id string representing the depth and the index
 the position of the node within the tree structure.
 
-    tree.children[0].children[1].id
-
-    // => 0/0/1
+    0 {"category":"JavaScript"}
+     |- 0/0 {"category":"Ajax (programming)"}
+     |- 0/1 {"category":"JavaScript engines"}
+     |- 0/2 {"category":"JavaScript programming languages family"}
+      |- 0/2/0  {"category":"JavaScript dialect engines"}
+     |- 0/3 {"category":"JavaScript based calendar components"}
+     |- 0/4 {"category":"JavaScript based HTML editors"}
 
 Check our [wiki](https://github.com/vasiliyaltunin/arboreal.js/wiki) for more usage examples. 
 
