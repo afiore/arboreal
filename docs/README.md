@@ -1,4 +1,9 @@
-# Arboreal.js [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vasiliyaltunin/arboreal.js/master/MIT-LICENSE.txt)
+[![NPM](https://nodei.co/npm/arboreal.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/arboreal.js/)
+
+# Arboreal.js [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) 
+
+[![Build Status](https://travis-ci.org/vasiliyaltunin/arboreal.js.svg?branch=master)](https://travis-ci.org/vasiliyaltunin/arboreal.js) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vasiliyaltunin/arboreal.js/master/MIT-LICENSE.txt) [![dependencies Status](https://david-dm.org/vasiliyaltunin/arboreal.js/status.svg)](https://david-dm.org/vasiliyaltunin/arboreal.js) [![devDependencies Status](https://david-dm.org/vasiliyaltunin/arboreal.js/dev-status.svg)](https://david-dm.org/vasiliyaltunin/arboreal.js?type=dev) 
+
 
 A micro-library for traversing and manipulating tree-like data
 structures in JavaScript, works with both node.js and the browser.
