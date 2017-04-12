@@ -42,7 +42,7 @@ the position of the node within the tree structure.
 
 Check our [wiki](https://github.com/vasiliyaltunin/arboreal.js/wiki) for more usage examples. 
 
-Also check this [demo]().
+Also check this [demo](https://vasiliyaltunin.github.io/arboreal.js/examples).
 
 ## Contributing
 
