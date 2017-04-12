@@ -21,7 +21,7 @@ Add script to you webpage
 <script src="../lib/arboreal.min.js" type="text/javascript"></script>
 ```
 
-Arboreal provides a set of methods for parsing, manipulating, and
+Arboreal.js provides a set of methods for parsing, manipulating, and
 traversing tree like data structures. A tree can be created from scratch and then extended with child elements.
 
     var tree = new Arboreal()
@@ -33,7 +33,7 @@ traversing tree like data structures. A tree can be created from scratch and the
          .appendChild()
          .appendChild();
 
-For each child node, Arboreal will automatically assign an id string representing the depth and the index
+For each child node, Arboreal.js will automatically assign an id string representing the depth and the index
 the position of the node within the tree structure.
 
     tree.children[0].children[1].id
