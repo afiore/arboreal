@@ -54,6 +54,8 @@ the position of the node within the tree structure.
 
 Check our [wiki](https://github.com/vasiliyaltunin/arboreal.js/wiki) for more usage examples. 
 
+Check our [documentation](https://vasiliyaltunin.github.io/arboreal.js/doc/module-arboreal.html)
+
 Also check this [demo](https://vasiliyaltunin.github.io/arboreal.js/examples).
 
 ## Contributing
