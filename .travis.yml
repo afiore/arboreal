@@ -1,2 +1,5 @@
-before_script: "npm install --dev"
+language: node_js
+node_js:
+  - "6"
+  - "5"
 script: "npm test"

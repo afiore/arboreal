@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Arboreal.js Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Arboreal.js</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-arboreal.html">arboreal</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><p><a href="https://nodei.co/npm/arboreal.js/"><img src="https://nodei.co/npm/arboreal.js.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
+<h1>Arboreal.js <a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt"></a></h1><p><a href="https://travis-ci.org/vasiliyaltunin/arboreal.js"><img src="https://travis-ci.org/vasiliyaltunin/arboreal.js.svg?branch=master" alt="Build Status"></a> <a href="https://raw.githubusercontent.com/vasiliyaltunin/arboreal.js/master/MIT-LICENSE.txt"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a> <a href="https://david-dm.org/vasiliyaltunin/arboreal.js"><img src="https://david-dm.org/vasiliyaltunin/arboreal.js/status.svg" alt="dependencies Status"></a> <a href="https://david-dm.org/vasiliyaltunin/arboreal.js?type=dev"><img src="https://david-dm.org/vasiliyaltunin/arboreal.js/dev-status.svg" alt="devDependencies Status"></a> </p>
+<p>A micro-library for traversing and manipulating tree-like data
+structures in JavaScript, works with both node.js and the browser.</p>
+<p>(Forked from <a href="https://github.com/shonzilla/arboreal">Nenad V. Nikolić</a>, originally by <a href="https://github.com/afiore/arboreal">Andrea Fiore</a>)</p>
+<h2>Installation</h2><p>Install via npm:</p>
+<pre class="prettyprint source lang-bash"><code>% npm install arboreal.js</code></pre><h2>Usage</h2><p>Add script to you webpage</p>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;../lib/arboreal.min.js&quot; type=&quot;text/javascript&quot;>&lt;/script></code></pre><p>Arboreal.js provides a set of methods for parsing, manipulating, and
+traversing tree like data structures. A tree can be created from scratch and then extended with child elements.</p>
+<pre class="prettyprint source"><code>var tree = new Arboreal(null, {category: 'JavaScript'});
+
+tree.appendChild({category: 'Ajax (programming)'})
+        .appendChild({category: 'JavaScript engines'})
+        .appendChild({category: 'JavaScript programming languages family'})
+            .children[2]
+            .appendChild({category: 'JavaScript dialect engines'})
+        .parent
+        .appendChild({category: 'JavaScript based calendar components'})
+        .appendChild({category: 'JavaScript based HTML editors'});</code></pre><p>For each child node, Arboreal.js will automatically assign an id string representing the depth and the index
+the position of the node within the tree structure.</p>
+<pre class="prettyprint source"><code>0 {&quot;category&quot;:&quot;JavaScript&quot;}
+ |- 0/0 {&quot;category&quot;:&quot;Ajax (programming)&quot;}
+ |- 0/1 {&quot;category&quot;:&quot;JavaScript engines&quot;}
+ |- 0/2 {&quot;category&quot;:&quot;JavaScript programming languages family&quot;}
+  |- 0/2/0  {&quot;category&quot;:&quot;JavaScript dialect engines&quot;}
+ |- 0/3 {&quot;category&quot;:&quot;JavaScript based calendar components&quot;}
+ |- 0/4 {&quot;category&quot;:&quot;JavaScript based HTML editors&quot;}</code></pre><p>Check our <a href="https://github.com/vasiliyaltunin/arboreal.js/wiki">wiki</a> for more usage examples. </p>
+<p>Check our <a href="https://vasiliyaltunin.github.io/arboreal.js/doc/module-arboreal.html">documentation</a></p>
+<p>Also check this <a href="https://vasiliyaltunin.github.io/arboreal.js/examples">demo</a>.</p>
+<h2>Contributing</h2><p>Here's a quick guide:</p>
+<ol>
+<li><p>Fork the repo </p>
+</li>
+<li><p><code>npm install</code></p>
+</li>
+<li><p><code>grunt</code></p>
+</li>
+<li><p>Make you changes and add test for you functionality. Look into <code>/test</code> folder.</p>
+</li>
+<li><p>Check that all test passed by running <code>grunt</code></p>
+</li>
+<li><p>Push to your fork and submit a pull request.</p>
+</li>
+</ol>
+<h2>Minfication</h2><p>A minified version generated into <code>/lib</code> when you run <code>grunt</code></p>
+<h2>Licence</h2><p>Released under MIT License - https://opensource.org/licenses/MIT</p></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright (c) 2017 Vasiliy Altunin.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Fri Apr 14th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

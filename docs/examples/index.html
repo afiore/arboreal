@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arboreal tree list demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
+        <script src="../lib/arboreal.min.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+    </head>
+    <body>
+        <script>
+            jQuery(document).ready(function ($) {
+
+                var rowStr = "";
+                var tree = null;
+
+                function initTree()
+                {
+                    rowStr = "<ul>";
+
+                    var wikipediaJsCategory = {
+                        category: 'JavaScript',
+                        subcategories: [
+                            {category: 'Ajax (programming)'},
+                            {category: 'JavaScript engines'},
+                            {category: 'JavaScript programming languages family',
+                                subcategories: [{
+                                        category: 'JavaScript dialect engines'
+                                    }]
+                            },
+                            {category: 'JavaScript based calendar components'},
+                            {category: 'JavaScript based HTML editors'}
+                        ]
+                    };
+
+
+                    tree = Arboreal.parse(wikipediaJsCategory, 'subcategories');
+                }
+
+                function updateTree()
+                {
+                    function iterator(node) {
+                        if (node.children.length > 0)
+                        {
+                            rowStr += '';
+                            rowStr += '<li class="jstree-open">' + node.data.category + '<ul>';
+                        } else
+                        {
+                            rowStr += '<li>' + node.data.category + '</li>';
+                        }
+                    }
+
+                    function iteratorAfter(node) {
+                        if (node.children.length > 0)
+                        {
+
+                            rowStr += '</ul></li>';
+                        }
+                    }
+
+                    tree.traverseDown(iterator, iteratorAfter);
+
+                    rowStr += "</ul>";
+                }
+
+                initTree();
+                updateTree();
+
+                $("#container").html(rowStr);
+
+                $('#container').jstree();
+
+
+                $(document).on("click", "#addToRoot", function ()
+                {
+                    initTree();
+                    tree.appendChild({category: 'JavaScript Library'});
+                    updateTree();
+                    $("#container").jstree('destroy');
+                    $("#container").html(rowStr);
+                    $("#container").jstree();
+
+                });
+
+                $(document).on("click", "#addSubElementAjax", function ()
+                {
+                    initTree();
+                    tree.children[0].appendChild({category: 'History'});
+                    updateTree();
+                    $("#container").jstree('destroy');
+                    $("#container").html(rowStr);
+                    $("#container").jstree();
+
+                });
+
+                $(document).on("click", "#addSubElementEngines", function ()
+                {
+                    initTree();
+
+                    var aNode = tree.find(function (node) {
+                        return (/dialect/).test(node.data.category)
+                    });
+
+                    aNode.appendChild({category: 'ECMAScript'})
+                            .appendChild({category: 'InScript (JavaScript engine)'})
+                            .appendChild({category: 'JScript'})
+                            .appendChild({category: 'QtScript'});
+
+                    updateTree();
+                    $("#container").jstree('destroy');
+                    $("#container").html(rowStr);
+                    $("#container").jstree();
+
+                });
+
+            });
+            hljs.initHighlightingOnLoad();
+
+
+
+        </script>
+
+        <button type="button" id="addToRoot">Add element to root</button>
+        <button type="button" id="addSubElementAjax">Add element Ajax</button>
+        <button type="button" id="addSubElementEngines">JavaScript dialect engines</button>
+
+        <p>
+
+        <div id="container">
+        </div>
+
+        <pre class="codeblock"><code class="javascript">jQuery(document).ready(function ($) {
+
+    var rowStr = "&lt;ul>";
+
+    var wikipediaJsCategory = {
+        category: 'JavaScript',
+        subcategories: [
+            {category: 'Ajax (programming)'},
+            {category: 'JavaScript engines'},
+            {category: 'JavaScript programming languages family',
+                subcategories: [{
+                        category: 'JavaScript dialect engines'
+                    }]
+            },
+            {category: 'JavaScript based calendar components'},
+            {category: 'JavaScript based HTML editors'}
+        ]
+    };
+
+
+    var tree = Arboreal.parse(wikipediaJsCategory, 'subcategories');
+
+
+    function iterator(node) {
+        if (node.children.length > 0)
+        {
+            rowStr += '';
+            rowStr += '&lt;li class="jstree-open">' + node.data.category + '&lt;ul>';
+        } else
+        {
+            rowStr += '&lt;li>' + node.data.category + '&lt;/li>';
+        }
+    }
+
+    function iteratorAfter(node) {
+        if (node.children.length > 0)
+        {
+
+            rowStr += '&lt;/ul>&lt;/li>';
+        }
+    }
+
+    tree.traverseDown(iterator, iteratorAfter);
+
+    rowStr += "&lt;/ul>";
+
+    $("#container").html(rowStr);
+
+    $('#container').jstree();
+});
+</code></pre>
+    </body></html>

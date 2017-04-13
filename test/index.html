@@ -1,26 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-<head>
- <title>Jasmine Test Runner for StateMachine.js</title>
-  <link rel="stylesheet" type="text/css" href="vendor/jasmine/jasmine.css">
-  <script type="text/javascript" src="vendor/jasmine/jasmine.js"></script>
-  <script type="text/javascript" src="vendor/jasmine/jasmine-html.js"></script>
+    <head>
+        <title>Arboreal Test Suite</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <script src="../lib/arboreal.js" type="text/javascript"></script>
+        
+        <script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+        <link href="../node_modules/qunitjs/qunit/qunit.css" rel="stylesheet" type="text/css"/>
+        <link href="../node_modules/qunitjs/qunit/qunit.css" rel="stylesheet" type="text/css"/>
 
-  <!-- module code -->
-  <script type="text/javascript" src="../lib/arboreal.js"></script>
+        <script src="test.js"></script>
 
-  <!-- spec code -->
-  <script type="text/javascript" src="specs/arboreal-spec.js"></script>
+        
+    <body>
+        <h1 id="qunit-header">Arboreal Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests">
+        </ol>
 
+        <div class="testCont"></div>
 
-</head>
-<body>
-
-<script type="text/javascript">
-  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-  jasmine.getEnv().execute();
-</script>
-</body>
+    </body>
 </html>

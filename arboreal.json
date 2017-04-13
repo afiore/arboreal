@@ -1,0 +1,26 @@
+{
+    "name": "arboreal.js",
+    "title": "Arboreal.js",
+    "description": "Javascript tree traversal and manipulation library (Forked from Nenad V. Nikolić, originally by Andrea Fiore)",
+    "version": "0.0.3",
+    "homepage": "https://github.com/vasiliyaltunin/arboreal.js",
+    "author": {                                                
+        "name": "Vasiliy Altunin",
+        "email": "skyr@altunin.online",
+        "url": "http://altunin.online"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/vasiliyaltunin/arboreal.git"
+    },
+    "bugs": "https://github.com/vasiliyaltunin/arboreal/issues",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+    },
+    "keywords": []
+}

@@ -1,0 +1,39 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [
+	"plugins/markdown"
+	],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+    "logoFile": "",
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "dateFormat": "ddd MMM Do YYYY",
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "systemName": "Arboreal.js",
+    "footer": "",
+    "copyright": "Copyright (c) 2017 Vasiliy Altunin.",
+    "navType": "vertical",
+    "theme": "cerulean",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": true,
+    "protocol": "html://",
+    "methodHeadingReturns": false
+    },
+    "opts": {
+    "encoding": "utf8",               
+    "destination": "./docs/doc",          
+    "recurse": true                 
+    }
+}
+
