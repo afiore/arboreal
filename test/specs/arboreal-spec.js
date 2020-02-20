@@ -160,7 +160,7 @@ describe("Arboreal", function () {
 
   it("#path", function () {
     var tree = new Arboreal(),
-        treeArry;
+        treeArray;
 
     appendSomeChildren(tree);
     treeArray = tree.toArray();
